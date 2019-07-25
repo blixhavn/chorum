@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterForm Component renders correctly 1`] = `
+"<Card>
+  <CardSection>
+    <Input label=\\"Email\\" placeholder=\\"email@gmail.com\\" onChangeText={[Function: bound onEmailChange]} value={[undefined]} />
+  </CardSection>
+  <CardSection>
+    <Input secureTextEntry={true} label=\\"Password\\" placeholder=\\"password\\" onChangeText={[Function: bound onPasswordChange]} value={[undefined]} />
+  </CardSection>
+  <Text style={{...}} />
+  <CardSection>
+    <Button onPress={[Function: bound onButtonPress]}>
+      Register
+    </Button>
+  </CardSection>
+</Card>"
+`;

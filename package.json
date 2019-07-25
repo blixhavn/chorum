@@ -7,12 +7,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "enzyme": "^3.10.0",
     "firebase": "^6.3.1",
     "react": "16.8.6",
     "react-native": "0.60.4",
     "react-native-router-flux": "^4.0.6",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
+    "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
@@ -20,11 +22,24 @@
     "@babel/runtime": "^7.5.0",
     "@react-native-community/eslint-config": "^0.0.3",
     "babel-jest": "^24.1.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.1.0",
+    "jest-enzyme": "^7.0.2",
     "metro-react-native-babel-preset": "^0.54.1",
-    "react-test-renderer": "16.8.6"
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "coverageDirectory": "__coverage__",
+    "testRegex": "./__tests__/[^setup].*.js$",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base|react-navigation|react-native-fabric)"
+    ],
+    "setupFiles": [
+      "./__tests__/setup.js"
+    ]
   }
 }

@@ -26,7 +26,7 @@ export const registerUser = ({ email, password }) => {
   return (dispatch) => {
     dispatch({ type: REG_SUBMITTED });
 
-    firebase.auth().createUserWithEmailAndPassword(email.trim(), password)
+    return firebase.auth().createUserWithEmailAndPassword(email.trim(), password)
       .then(user => registerUserSuccess(dispatch, user))
       .catch((error) => registerUserFail(dispatch, error));
   };

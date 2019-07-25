@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { regEmailChanged, regPasswordChanged, registerUser } from '../actions';
 import { Card, CardSection, Input, Button, Spinner } from './common';
 
-class RegisterForm extends Component {
+export class RegisterForm extends Component {
   onEmailChange(text) {
     this.props.regEmailChanged(text);
   }
