@@ -9,7 +9,7 @@ export class NewsDisplay extends Component {
     return (
       <Card>
         <CardSection>
-          <Text>News goes here. Soon. Very soon</Text>
+          <Text>News goes here. Soon. Very soon. Sooooon</Text>
         </CardSection>
       </Card>
     );
