@@ -39,7 +39,7 @@ exports[`NewsDisplay Component renders correctly 1`] = `
     }
   >
     <Text>
-      News goes here. Soon. Very soon
+      News goes here. Soon. Very soon. Sooooon
     </Text>
   </View>
 </View>
