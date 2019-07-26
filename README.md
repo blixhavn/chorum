@@ -9,6 +9,16 @@ The app is made with React-Native, Redux and Firebase. New technology might be i
 ### Contributing
 I'd love it if anyone wants to contribute to this little project. To start, have a look at our [issues](https://github.com/blixhavn/chorum/issues), fork the repo, and send over a pull request :) 
 
+#### Getting started
+To get Chorum to run locally, the following steps should be sufficient:
+* Clone the repo
+* CD into it and run `yarn install` to install Node dependencies
+* run `yarn test` to run the tests locally.
+
+For Android development, you need to have Android Studio installed, and set up either with an emulator, or connect your android phone. I have currently no guide for this.
+
+For iOS development, I have currently no idea how to get started. Please fill me in here!
+
 #### Commit style
 
 Please don't be scared by these rules -- remember the power of interactive rebase and `git commit --amend` for cleaning up a branch before submitting a pull request (which means that `fixup` and `bleeeh` are perfectly fine before sending your work over here). 
