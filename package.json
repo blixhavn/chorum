@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "dependencies": {
+    "codecov": "^3.5.0",
     "enzyme": "^3.10.0",
     "firebase": "^6.3.1",
     "react": "16.8.6",
@@ -33,7 +34,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "testEnvironment": "node",
-    "coverageDirectory": "__coverage__",
+    "coverageDirectory": "./coverage/",
     "testRegex": "./__tests__/[^setup].*.js$",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|native-base|react-navigation|react-native-fabric)"
