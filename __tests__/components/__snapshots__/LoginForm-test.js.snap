@@ -4,141 +4,27 @@ exports[`LoginForm Component renders correctly 1`] = `
 <View
   style={
     Object {
-      "borderBottomWidth": 0,
-      "borderColor": "#ddd",
-      "borderRadius": 2,
-      "borderWidth": 1,
-      "elevation": 1,
-      "marginLeft": 5,
-      "marginRight": 5,
-      "marginTop": 10,
-      "shadowColor": "#000",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 0.1,
-      "shadowRadius": 2,
+      "backgroundColor": "#5C2569",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 1,
-          "borderColor": "#ddd",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "padding": 5,
-          "position": "relative",
-        },
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "height": 40,
-        }
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/img/chorum-splash.png",
       }
-    >
-      <Text
-        style={
-          Object {
-            "flex": 1,
-            "fontSize": 18,
-            "paddingLeft": 20,
-          }
-        }
-      >
-        Email
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        autoCorrect={false}
-        onChangeText={[Function]}
-        placeholder="email@gmail.com"
-        rejectResponderTermination={true}
-        style={
-          Object {
-            "color": "#000",
-            "flex": 2,
-            "fontSize": 18,
-            "lineHeight": 23,
-            "paddingLeft": 5,
-            "paddingRight": 5,
-          }
-        }
-        underlineColorAndroid="transparent"
-        value="test@email.com"
-      />
-    </View>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 1,
-          "borderColor": "#ddd",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "padding": 5,
-          "position": "relative",
-        },
-        undefined,
-      ]
     }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "height": 40,
-        }
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 300,
+        "width": 300,
       }
-    >
-      <Text
-        style={
-          Object {
-            "flex": 1,
-            "fontSize": 18,
-            "paddingLeft": 20,
-          }
-        }
-      >
-        Password
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        autoCorrect={false}
-        onChangeText={[Function]}
-        placeholder="password"
-        rejectResponderTermination={true}
-        secureTextEntry={true}
-        style={
-          Object {
-            "color": "#000",
-            "flex": 2,
-            "fontSize": 18,
-            "lineHeight": 23,
-            "paddingLeft": 5,
-            "paddingRight": 5,
-          }
-        }
-        underlineColorAndroid="transparent"
-        value="password"
-      />
-    </View>
-  </View>
+    }
+  />
   <Text
     style={
       Object {
@@ -152,47 +38,346 @@ exports[`LoginForm Component renders correctly 1`] = `
   </Text>
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 1,
-          "borderColor": "#ddd",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "padding": 5,
-          "position": "relative",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginLeft": 30,
+        "marginRight": 30,
+        "marginTop": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+      }
     }
   >
-    <View
-      accessible={true}
-      clickable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      fill="grey"
+      focusable="false"
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "alignSelf": "center",
+            "padding": 10,
+            "paddingRight": 20,
+          },
+          null,
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      vbHeight={512}
+      vbWidth={512}
+      width={16}
+    >
+      <RNSVGGroup
+        fill={
+          Array [
+            0,
+            4286611584,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        font={Object {}}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      >
+        <RNSVGPath
+          d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"
+          fill={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      autoCompleteType="email"
+      keyboardType="email-address"
+      onChangeText={[Function]}
+      placeholder="your@email.com"
+      rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#fff",
-          "borderColor": "#007aff",
-          "borderRadius": 5,
-          "borderWidth": 1,
           "flex": 1,
-          "marginLeft": 5,
-          "marginRight": 5,
-          "opacity": 1,
+          "fontSize": 20,
+          "padding": 15,
         }
       }
+      textContentType="emailAddress"
+      underlineColorAndroid="transparent"
+      value="test@email.com"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginLeft": 30,
+        "marginRight": 30,
+        "marginTop": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      fill="grey"
+      focusable="false"
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "alignSelf": "center",
+            "padding": 10,
+            "paddingRight": 20,
+          },
+          null,
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      vbHeight={512}
+      vbWidth={512}
+      width={16}
     >
-      <Text
-        style={
+      <RNSVGGroup
+        fill={
+          Array [
+            0,
+            4286611584,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        font={Object {}}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      >
+        <RNSVGPath
+          d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"
+          fill={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <TextInput
+      allowFontScaling={true}
+      autoCompleteType="password"
+      onChangeText={[Function]}
+      placeholder="**********"
+      rejectResponderTermination={true}
+      secureTextEntry={true}
+      style={
+        Object {
+          "flex": 1,
+          "fontSize": 20,
+          "padding": 15,
+        }
+      }
+      textContentType="password"
+      underlineColorAndroid="transparent"
+      value="password"
+    />
+  </View>
+  <View
+    accessible={true}
+    clickable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A2D996",
+        "borderColor": "#007aff",
+        "borderRadius": 10,
+        "borderWidth": 0,
+        "flex": null,
+        "marginBottom": 10,
+        "marginLeft": 30,
+        "marginRight": 30,
+        "marginTop": 10,
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
           Object {
             "alignSelf": "center",
             "color": "#007aff",
@@ -200,48 +385,47 @@ exports[`LoginForm Component renders correctly 1`] = `
             "fontWeight": "600",
             "paddingBottom": 10,
             "paddingTop": 10,
-          }
-        }
-      >
-        Login
-      </Text>
-    </View>
+          },
+          Object {
+            "color": "#27282D",
+            "fontSize": 18,
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Login
+    </Text>
   </View>
   <View
+    accessible={true}
+    clickable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 1,
-          "borderColor": "#ddd",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "padding": 5,
-          "position": "relative",
-        },
-        undefined,
-      ]
+      Object {
+        "alignContent": "center",
+        "paddingBottom": 15,
+      }
     }
   >
-    <View
-      accessible={true}
-      clickable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={null}
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#FFFFFF",
+          "fontSize": 18,
+        }
+      }
     >
-      <Text
-        style={null}
-      >
-        Register
-      </Text>
-    </View>
+      Register new account
+    </Text>
   </View>
 </View>
 `;

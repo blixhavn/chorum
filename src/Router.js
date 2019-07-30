@@ -15,7 +15,7 @@ class RouterComponent extends Component {
             <Scene key="newsDisplay" component={NewsDisplay} title="News"/>
           </Scene>
           <Scene key="auth" initial={!this.props.loggedIn}>
-            <Scene key="login" component={LoginForm} title="Please Login"/>
+            <Scene key="login" component={LoginForm} hideNavBar={true}/>
             <Scene key="register" component={RegisterForm} title="Register" />
             <Scene key="registerSuccessful" component={RegisterSuccessful} title="Registation Successful"/>
           </Scene>
