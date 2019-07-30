@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { YellowBox } from 'react-native';
+import { YellowBox, StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
+import SplashScreen from 'react-native-splash-screen'
 import reducers from './reducers';
 import Router from './Router';
 
@@ -23,6 +24,8 @@ class App extends Component {
     };
 
     firebase.initializeApp(config);
+
+    SplashScreen.hide();
   }
 
   render() {
@@ -30,7 +33,11 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        <Router />
+        <StatusBar
+          backgroundColor="#5c2569"
+          barStyle="light-content"
+        />
+        <Router style={{ backgroundColor: '#5c2569' }}/>
       </Provider>
     );
   }
