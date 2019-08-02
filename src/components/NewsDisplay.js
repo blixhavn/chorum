@@ -16,5 +16,11 @@ export class NewsDisplay extends Component {
   }
 }
 
+export const TabIcon = ({selected, title}) => {
+    return (
+        <Text style={{color: selected ? 'red' : 'black'}}>{title}</Text>
+    )
+}
+
 
 export default connect(null)(NewsDisplay);
