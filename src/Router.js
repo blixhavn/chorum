@@ -32,7 +32,7 @@ class RouterComponent extends Component {
           </Scene>
           <Scene key="auth" initial={!this.props.loggedIn}>
             <Scene key="login" component={LoginForm} hideNavBar={true}/>
-            <Scene key="register" component={RegisterForm} title="Register" />
+            <Scene key="register" component={RegisterForm} hideNavBar={true} />
             <Scene key="registerSuccessful" component={RegisterSuccessful} title="Registation Successful"/>
           </Scene>
         </Scene>
