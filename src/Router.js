@@ -25,7 +25,7 @@ class RouterComponent extends Component {
           >
             <Scene key="newsDisplay" component={NewsDisplay} title="News" showLabel={false} icon={TabIcon(faNewspaper)}/>
             <Scene key="songs" showLabel={false} icon={TabIcon(faMusic)}>
-              <Scene key="songList" component={SongList} title="Songs" onRight={Actions.addSong} rightTitle="Add"/>
+              <Scene key="songList" component={SongList} title="Songs" onRight={() => Actions.addSong()} rightTitle="Add"/>
               <Scene key="addSong" component={SongForm} title="Add song" />
               <Scene key="editSong" component={SongForm} title="Edit song" />
             </Scene>
