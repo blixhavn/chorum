@@ -23,9 +23,8 @@ For iOS development, I have currently no idea how to get started. Please fill me
 
 Please don't be scared by these rules -- remember the power of interactive rebase and `git commit --amend` for cleaning up a branch before submitting a pull request (which means that `fixup` and `bleeeh` are perfectly fine before sending your work over here). 
 
-We follow the [Udacity style guide](http://udacity.github.io/git-styleguide/). In short:
+By and large, we follow the [Udacity style guide](http://udacity.github.io/git-styleguide/). In short:
 
-* Use imperative tone in header
 * Prefix header with type of commit (**feat, fix, docs, style, refactor, test, chore**)
 * Use body if needed - keep the header short
 * Link all relevant issues in footer
