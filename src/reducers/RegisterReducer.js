@@ -1,4 +1,5 @@
 import {
+  REG_NAME_CHANGED,
   REG_EMAIL_CHANGED,
   REG_PASSWORD_CHANGED,
   REG_SUCCESS,
@@ -7,6 +8,7 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
+  name: '',
   email: '',
   password: '',
   user: null,
@@ -16,8 +18,10 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case REG_EMAIL_CHANGED:
-      return { ...state, email: action.payload };
+    case REG_NAME_CHANGED:
+      return { ...state, name: action.payload };
+      case REG_EMAIL_CHANGED:
+        return { ...state, email: action.payload };
     case REG_PASSWORD_CHANGED:
       return { ...state, password: action.payload };
     case REG_SUBMITTED:

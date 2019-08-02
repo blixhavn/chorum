@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, StyleSheet } from 'react-native';
+import { Text, View, TouchableHighlight, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faAt, faKey } from '@fortawesome/free-solid-svg-icons';
-import { regEmailChanged, regPasswordChanged, registerUser } from '../actions';
-import { Card, CardSection, Input2, Button2, Spinner } from './common';
+import { Actions } from 'react-native-router-flux';
+import { faAt, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { regNameChanged, regEmailChanged, regPasswordChanged, registerUser } from '../actions';
+import { Input2, Button2, Spinner } from './common';
 import { colors } from './common/constants';
 
 export class RegisterForm extends Component {
+  onNameChange(text) {
+    this.props.regNameChanged(text);
+  }
+
   onEmailChange(text) {
     this.props.regEmailChanged(text);
   }
@@ -17,9 +21,9 @@ export class RegisterForm extends Component {
   }
 
   onButtonPress() {
-    const { email, password } = this.props;
+    const { name, email, password } = this.props;
 
-    this.props.registerUser({ email, password });
+    this.props.registerUser({ name, email, password });
   }
 
   renderButton() {
@@ -40,9 +44,23 @@ export class RegisterForm extends Component {
     return (
       <View style={styles.body}>
 
+        <View style={styles.headerContainer}>
+          <Text style={styles.header}>
+            Create new account
+          </Text>
+        </View>
+
         <Text style={styles.errorTextStyle}>
           {this.props.error}
         </Text>
+
+        <Input2
+          icon={faUser}
+          autoCapitalize='none'
+          placeholder="Your name"
+          onChangeText={this.onNameChange.bind(this)}
+          value={this.props.name}
+        />
 
         <Input2
           icon={faAt}
@@ -66,6 +84,10 @@ export class RegisterForm extends Component {
         />
 
         {this.renderButton()}
+
+        <TouchableHighlight  style={styles.bottomLink} onPress={() => { Actions.pop() }}>
+          <Text style={styles.goBackLink}>Or, log in with an existing account</Text>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -84,15 +106,34 @@ const styles = StyleSheet.create({
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
-  }
+  }, 
+  headerContainer: {
+    height: 300,
+    padding: 50,
+    justifyContent: 'center'
+  },
+  header: {
+    fontSize: 30,
+    color: colors.white,
+    textTransform: 'uppercase'
+  }, 
+  bottomLink: {
+    alignContent: 'center',
+    paddingBottom: 15
+  },
+  goBackLink: {
+    fontSize: 18,
+    alignSelf: 'center',
+    color: colors.white,
+  },
 })
 
 const mapStateToProps = ({ register }) => {
-  const { email, password, error, loading } = register;
+  const { name, email, password, error, loading } = register;
 
-  return { email, password, error, loading };
+  return { name, email, password, error, loading };
 };
 
 export default connect(mapStateToProps, {
-  regEmailChanged, regPasswordChanged, registerUser
+  regNameChanged, regEmailChanged, regPasswordChanged, registerUser
 })(RegisterForm);
