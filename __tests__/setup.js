@@ -38,6 +38,16 @@ jest.mock('firebase', () => {
     },
     // use null if your code does not use AUTHENTICATION
     () => {
+      mockauth.signInWithEmailAndPassword = jest.fn().mockResolvedValue({
+        user: {
+          uid: 123123
+        }
+      });
+      mockauth.createUserWithEmailAndPassword = jest.fn().mockResolvedValue({
+        user: {
+          uid: 123123
+        }
+      })
       return mockauth;
     },
     // use null if your code does not use FIRESTORE
@@ -54,6 +64,7 @@ jest.mock('firebase', () => {
     }
   );
   const firebase = mocksdk.initializeApp();
+
 
   return firebase;
 });

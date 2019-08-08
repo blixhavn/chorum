@@ -1,5 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
+import firebase from 'firebase';
 import * as actions from '../../src/actions/AuthActions'
 import * as types from '../../src/actions/types'
 
@@ -31,8 +32,8 @@ describe('AuthActions', () => {
     const resolvedActions = [
         { type: types.LOGIN_USER_SUBMITTED },
         { type: types.LOGIN_USER_SUCCESS, payload: {
-          email: email,
-          isAnonymous: false
+          profile: null,
+          uid: 123123
         }
       }
     ];

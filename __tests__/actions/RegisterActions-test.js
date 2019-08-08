@@ -7,6 +7,7 @@ const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
 describe('RegisterActions', () => {
+  const name = 'John Doe';
   const email = 'new@email.com';
   const password = 'hunter2';
 
@@ -26,16 +27,16 @@ describe('RegisterActions', () => {
     expect(actions.regPasswordChanged(password)).toEqual(expectedAction);
   });
 
-  // it('should create successful actions after registering', () => {
-  //   const store = mockStore();
-  //   const resolvedActions = [
-  //       { type: types.REG_SUBMITTED },
-  //       { type: types.REG_SUCCESS, payload: undefined }
-  //   ];
+  it('should create successful actions after registering', () => {
+    const store = mockStore();
+    const resolvedActions = [
+        { type: types.REG_SUBMITTED },
+        { type: types.REG_SUCCESS, payload: undefined }
+    ];
 
-  //   return store.dispatch(actions.registerUser({ name, email, password })).then(() => {
-  //     expect(store.getActions()).toEqual(resolvedActions);
-  //   });
-  // });
+    return store.dispatch(actions.registerUser({ name, email, password })).then(() => {
+      expect(store.getActions()).toEqual(resolvedActions);
+    });
+  });
 });
 
