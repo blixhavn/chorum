@@ -1,18 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RegisterForm Component renders correctly 1`] = `
-"<Card>
-  <CardSection>
-    <Input label=\\"Email\\" placeholder=\\"email@gmail.com\\" onChangeText={[Function: bound onEmailChange]} value={[undefined]} />
-  </CardSection>
-  <CardSection>
-    <Input secureTextEntry={true} label=\\"Password\\" placeholder=\\"password\\" onChangeText={[Function: bound onPasswordChange]} value={[undefined]} />
-  </CardSection>
+"<View style={{...}}>
+  <View style={{...}}>
+    <Text style={{...}}>
+      Create new account
+    </Text>
+  </View>
   <Text style={{...}} />
-  <CardSection>
-    <Button onPress={[Function: bound onButtonPress]}>
-      Register
-    </Button>
-  </CardSection>
-</Card>"
+  <Input2 icon={{...}} autoCapitalize=\\"none\\" placeholder=\\"Your name\\" onChangeText={[Function: bound onNameChange]} value={[undefined]} />
+  <Input2 icon={{...}} autoCapitalize=\\"none\\" placeholder=\\"your@email.com\\" onChangeText={[Function: bound onEmailChange]} value={[undefined]} keyboardType=\\"email-address\\" autoCompleteType=\\"email\\" textContentType=\\"emailAddress\\" />
+  <Input2 icon={{...}} secureTextEntry={true} placeholder=\\"**********\\" onChangeText={[Function: bound onPasswordChange]} value={[undefined]} textContentType=\\"password\\" autoCompleteType=\\"password\\" />
+  <Button2 onPress={[Function: bound onButtonPress]}>
+    Register
+  </Button2>
+  <TouchableHighlight style={{...}} onPress={[Function: onPress]} activeOpacity={0.85} delayPressOut={100} underlayColor=\\"black\\">
+    <Text style={{...}}>
+      Or, log in with an existing account
+    </Text>
+  </TouchableHighlight>
+</View>"
 `;
