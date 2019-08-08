@@ -50,45 +50,45 @@ export class RegisterForm extends Component {
           </Text>
         </View>
 
-        <Text style={styles.errorTextStyle}>
-          {this.props.error}
-        </Text>
+          <Text style={styles.errorTextStyle}>
+            {this.props.error}
+          </Text>
 
-        <Input2
-          icon={faUser}
-          autoCapitalize='none'
-          placeholder="Your name"
-          onChangeText={this.onNameChange.bind(this)}
-          value={this.props.name}
-        />
+          <Input2
+            icon={faUser}
+            autoCapitalize='none'
+            placeholder="Your name"
+            onChangeText={this.onNameChange.bind(this)}
+            value={this.props.name}
+          />
 
-        <Input2
-          icon={faAt}
-          autoCapitalize='none'
-          placeholder="your@email.com"
-          onChangeText={this.onEmailChange.bind(this)}
-          value={this.props.email}
-          keyboardType="email-address"
-          autoCompleteType="email"
-          textContentType="emailAddress"
-        />
+          <Input2
+            icon={faAt}
+            autoCapitalize='none'
+            placeholder="your@email.com"
+            onChangeText={this.onEmailChange.bind(this)}
+            value={this.props.email}
+            keyboardType="email-address"
+            autoCompleteType="email"
+            textContentType="emailAddress"
+          />
 
-        <Input2
-          icon={faKey}
-          secureTextEntry
-          placeholder="**********"
-          onChangeText={this.onPasswordChange.bind(this)}
-          value={this.props.password}
-          textContentType="password"
-          autoCompleteType="password"
-        />
+          <Input2
+            icon={faKey}
+            secureTextEntry
+            placeholder="**********"
+            onChangeText={this.onPasswordChange.bind(this)}
+            value={this.props.password}
+            textContentType="password"
+            autoCompleteType="password"
+          />
 
-        {this.renderButton()}
+          {this.renderButton()}
 
-        <TouchableHighlight  style={styles.bottomLink} onPress={() => { Actions.pop() }}>
-          <Text style={styles.goBackLink}>Or, log in with an existing account</Text>
-        </TouchableHighlight>
-      </View>
+          <TouchableHighlight  style={styles.bottomLink} onPress={() => { Actions.pop() }}>
+            <Text style={styles.goBackLink}>Or, log in with an existing account</Text>
+          </TouchableHighlight>
+        </View>
     );
   }
 }
@@ -109,13 +109,16 @@ const styles = StyleSheet.create({
   }, 
   headerContainer: {
     height: 300,
-    padding: 50,
-    justifyContent: 'center'
+    padding: 30,
+    justifyContent: 'center',
   },
   header: {
-    fontSize: 30,
+    fontFamily: 'sans-serif-light',
+    fontSize: 26,
+    fontWeight: "100",
     color: colors.white,
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    textAlign: 'center'
   }, 
   bottomLink: {
     alignContent: 'center',
