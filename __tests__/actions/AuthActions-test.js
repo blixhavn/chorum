@@ -30,7 +30,11 @@ describe('AuthActions', () => {
     const store = mockStore();
     const resolvedActions = [
         { type: types.LOGIN_USER_SUBMITTED },
-        { type: types.LOGIN_USER_SUCCESS, payload: undefined }
+        { type: types.LOGIN_USER_SUCCESS, payload: {
+          email: email,
+          isAnonymous: false
+        }
+      }
     ];
 
     return store.dispatch(actions.loginUser({ email, password })).then(() => {

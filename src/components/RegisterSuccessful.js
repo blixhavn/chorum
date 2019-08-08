@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+import { BackHandler } from 'react-native';
 import { Text, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 import { Card, CardSection } from './common';
 import { Actions } from 'react-native-router-flux';
 
 class RegisterSuccessful extends Component {
+  componentDidMount() {
+      BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+  }
 
+  componentWillUnmount() {
+      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+  }
+
+  handleBackButton() {
+      return true;
+  }
+  
   render() {
     return (
       <Card>

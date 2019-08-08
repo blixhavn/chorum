@@ -11,6 +11,10 @@ import SongForm from './components/SongForm';
 import { colors } from './components/common/constants';
 import { TabIcon } from './components/common';
 
+const sceneStyle = {
+  backgroundColor: colors.purple,
+}
+
 class RouterComponent extends Component {
   render() {
     return (
@@ -31,8 +35,8 @@ class RouterComponent extends Component {
             </Scene>
           </Scene>
           <Scene key="auth" initial={!this.props.loggedIn}>
-            <Scene key="login" component={LoginForm} hideNavBar={true}/>
-            <Scene key="register" component={RegisterForm} title="Register" />
+            <Scene key="login" component={LoginForm} hideNavBar={true} initial/>
+            <Scene key="register" component={RegisterForm} hideNavBar={true} />
             <Scene key="registerSuccessful" component={RegisterSuccessful} title="Registation Successful"/>
           </Scene>
         </Scene>

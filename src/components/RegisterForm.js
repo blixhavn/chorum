@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View, TouchableHighlight, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { regEmailChanged, regPasswordChanged, registerUser } from '../actions';
-import { Card, CardSection, Input, Button, Spinner } from './common';
+import { Actions } from 'react-native-router-flux';
+import { faAt, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { regNameChanged, regEmailChanged, regPasswordChanged, registerUser } from '../actions';
+import { Input2, Button2, Spinner } from './common';
+import { colors } from './common/constants';
 
 export class RegisterForm extends Component {
+  onNameChange(text) {
+    this.props.regNameChanged(text);
+  }
+
   onEmailChange(text) {
     this.props.regEmailChanged(text);
   }
@@ -14,9 +21,9 @@ export class RegisterForm extends Component {
   }
 
   onButtonPress() {
-    const { email, password } = this.props;
+    const { name, email, password } = this.props;
 
-    this.props.registerUser({ email, password });
+    this.props.registerUser({ name, email, password });
   }
 
   renderButton() {
@@ -25,60 +32,111 @@ export class RegisterForm extends Component {
     }
 
     return (
-      <Button onPress={this.onButtonPress.bind(this)}>
+      <Button2
+        onPress={this.onButtonPress.bind(this)}
+      >
         Register
-      </Button>
+      </Button2>
     );
   }
 
   render() {
     return (
-      <Card>
-        <CardSection>
-          <Input
-            label="Email"
-            placeholder="email@gmail.com"
+      <View style={styles.body}>
+
+        <View style={styles.headerContainer}>
+          <Text style={styles.header}>
+            Create new account
+          </Text>
+        </View>
+
+          <Text style={styles.errorTextStyle}>
+            {this.props.error}
+          </Text>
+
+          <Input2
+            icon={faUser}
+            autoCapitalize='none'
+            placeholder="Your name"
+            onChangeText={this.onNameChange.bind(this)}
+            value={this.props.name}
+          />
+
+          <Input2
+            icon={faAt}
+            autoCapitalize='none'
+            placeholder="your@email.com"
             onChangeText={this.onEmailChange.bind(this)}
             value={this.props.email}
+            keyboardType="email-address"
+            autoCompleteType="email"
+            textContentType="emailAddress"
           />
-        </CardSection>
 
-        <CardSection>
-          <Input
+          <Input2
+            icon={faKey}
             secureTextEntry
-            label="Password"
-            placeholder="password"
+            placeholder="**********"
             onChangeText={this.onPasswordChange.bind(this)}
             value={this.props.password}
+            textContentType="password"
+            autoCompleteType="password"
           />
-        </CardSection>
 
-        <Text style={styles.errorTextStyle}>
-          {this.props.error}
-        </Text>
-
-        <CardSection>
           {this.renderButton()}
-        </CardSection>
-      </Card>
+
+          <TouchableHighlight  style={styles.bottomLink} onPress={() => { Actions.pop() }}>
+            <Text style={styles.goBackLink}>Or, log in with an existing account</Text>
+          </TouchableHighlight>
+        </View>
     );
   }
 }
 
-const styles = {
+
+
+const styles = StyleSheet.create({
+  body: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: colors.purple,
+    justifyContent: 'flex-start'
+  },
   errorTextStyle: {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
-  }
-};
+  }, 
+  headerContainer: {
+    height: 300,
+    padding: 30,
+    justifyContent: 'center',
+  },
+  header: {
+    fontFamily: 'sans-serif-light',
+    fontSize: 26,
+    fontWeight: "100",
+    color: colors.white,
+    textTransform: 'uppercase',
+    textAlign: 'center'
+  }, 
+  bottomLink: {
+    alignContent: 'center',
+    paddingBottom: 15
+  },
+  goBackLink: {
+    fontSize: 18,
+    alignSelf: 'center',
+    color: colors.white,
+  },
+})
 
 const mapStateToProps = ({ register }) => {
-  const { email, password, error, loading } = register;
+  const { name, email, password, error, loading } = register;
 
-  return { email, password, error, loading };
+  return { name, email, password, error, loading };
 };
 
 export default connect(mapStateToProps, {
-  regEmailChanged, regPasswordChanged, registerUser
+  regNameChanged, regEmailChanged, regPasswordChanged, registerUser
 })(RegisterForm);

@@ -8,7 +8,7 @@ import SplashScreen from 'react-native-splash-screen'
 import reducers from './reducers';
 import Router from './Router';
 
-YellowBox.ignoreWarnings(['Warning: componentWill']);
+YellowBox.ignoreWarnings(['Warning: componentWill', 'Setting a timer']);
 
 
 class App extends Component {

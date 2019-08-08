@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "jest --config jest.config.js && codecov"
+    "test": "jest --config jest.config.js",
+    "citest": "jest --config jest.config.js && codecov"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
@@ -31,6 +32,7 @@
     "@react-native-community/eslint-config": "^0.0.3",
     "babel-jest": "^24.1.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "firebase-mock": "^2.2.10",
     "jest": "^24.1.0",
     "jest-enzyme": "^7.0.2",
     "metro-react-native-babel-preset": "^0.54.1",
