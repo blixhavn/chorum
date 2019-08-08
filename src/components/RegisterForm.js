@@ -51,7 +51,7 @@ export class RegisterForm extends Component {
         </View>
 
           <Text style={styles.errorTextStyle}>
-            {this.props.error}
+            {this.props.error.message}
           </Text>
 
           <Input2

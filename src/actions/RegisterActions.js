@@ -46,7 +46,7 @@ const registerUserFail = (dispatch, error) => {
 
 
 const registerUserSaveProfile = (dispatch, name, response) => {
-  firebase.database().ref(`/users/${response.user.uid}`)
+  firebase.database().ref(`/user/${response.user.uid}`)
     .set({ name: name.trim() })
     .then((response) => registerUserSuccess(dispatch, response));
 };
