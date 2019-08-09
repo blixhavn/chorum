@@ -40,6 +40,16 @@ export class RegisterForm extends Component {
     );
   }
 
+  renderErrorMessage() {
+    if(this.props.error) {
+      return (
+        <Text style={styles.errorTextStyle}>
+          {this.props.error.message}
+        </Text>
+      )
+    }
+  }
+
   render() {
     return (
       <View style={styles.body}>
@@ -50,9 +60,7 @@ export class RegisterForm extends Component {
           </Text>
         </View>
 
-          <Text style={styles.errorTextStyle}>
-            {this.props.error}
-          </Text>
+        {this.renderErrorMessage()}
 
           <Input2
             icon={faUser}

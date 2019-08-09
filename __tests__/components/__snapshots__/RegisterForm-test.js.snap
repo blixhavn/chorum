@@ -7,7 +7,6 @@ exports[`RegisterForm Component renders correctly 1`] = `
       Create new account
     </Text>
   </View>
-  <Text style={{...}} />
   <Input2 icon={{...}} autoCapitalize=\\"none\\" placeholder=\\"Your name\\" onChangeText={[Function: bound onNameChange]} value={[undefined]} />
   <Input2 icon={{...}} autoCapitalize=\\"none\\" placeholder=\\"your@email.com\\" onChangeText={[Function: bound onEmailChange]} value={[undefined]} keyboardType=\\"email-address\\" autoCompleteType=\\"email\\" textContentType=\\"emailAddress\\" />
   <Input2 icon={{...}} secureTextEntry={true} placeholder=\\"**********\\" onChangeText={[Function: bound onPasswordChange]} value={[undefined]} textContentType=\\"password\\" autoCompleteType=\\"password\\" />

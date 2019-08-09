@@ -27,10 +27,21 @@ export const loginUser = ({ email, password }) => {
     dispatch({ type: LOGIN_USER_SUBMITTED });
 
     return firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(response => fetchUserInfo(response.user))
       .then(user => loginUserSuccess(dispatch, user))
       .catch((error) => loginUserFail(dispatch, error));
   };
 };
+
+async function fetchUserInfo(user) {
+  let enrichedUser;
+  await firebase.database().ref(`/user/${user.uid}`)
+  .once('value', snapshot => {
+    additionalUserInfo = snapshot.val();
+    enrichedUser = {...user, profile: additionalUserInfo}
+  });
+  return enrichedUser;
+}
 
 const loginUserFail = (dispatch, error) => {
   dispatch({ type: LOGIN_USER_FAIL });

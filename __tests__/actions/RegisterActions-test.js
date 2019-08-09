@@ -7,6 +7,7 @@ const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
 describe('RegisterActions', () => {
+  const name = 'John Doe';
   const email = 'new@email.com';
   const password = 'hunter2';
 
