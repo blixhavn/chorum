@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native';
 import renderer from 'react-test-renderer';
-import { NewsDisplay } from '../../src/components/NewsDisplay';
+import { NewsDisplay } from '../NewsDisplay';
 
 describe("NewsDisplay Component", () => {
     it("renders correctly", () => {

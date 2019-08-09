@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BackHandler } from 'react-native';
 import { Text, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
-import { Card, CardSection } from './common';
+import { Card, CardSection } from '../../../components';
 import { Actions } from 'react-native-router-flux';
 
 class RegisterSuccessful extends Component {

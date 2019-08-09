@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native';
 import renderer from 'react-test-renderer';
-import { LoginForm } from '../../src/components/LoginForm';
+import { LoginForm } from '../LoginForm';
 
 describe("LoginForm Component", () => {
     const props = {

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { Card, CardSection } from './common';
+import { Card, CardSection } from '../../../components';
 
-class SongList extends Component {
+class SongForm extends Component {
     render() {
         return (
             <Card>
               <CardSection>
-                <Text>Songs be here</Text>
+                <Text>Create song</Text>
               </CardSection>
             </Card>
         );
     }
 }
 
-export default connect(null)(SongList);
+export default connect(null)(SongForm);

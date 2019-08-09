@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import * as actions from '../../src/actions/RegisterActions'
-import * as types from '../../src/actions/types'
+import * as actions from '../RegisterActions'
+import * as types from '../types'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)

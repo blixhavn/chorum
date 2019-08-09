@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { faAt, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 import { regNameChanged, regEmailChanged, regPasswordChanged, registerUser } from '../actions';
-import { Input2, Button2, Spinner } from './common';
-import { colors } from './common/constants';
+import { Input2, Button2, Spinner } from '../../../components';
+import { colors } from '../../../api/constants';
 
 export class RegisterForm extends Component {
   onNameChange(text) {

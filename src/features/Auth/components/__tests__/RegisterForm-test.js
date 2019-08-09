@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
-import { RegisterForm } from '../../src/components/RegisterForm';
+import { RegisterForm } from '../RegisterForm';
 
 describe("RegisterForm Component", () => {
     const initialState = {

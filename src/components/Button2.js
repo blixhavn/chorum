@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { colors } from './constants';
+import { colors } from '../api/constants';
 
 const Button2 = (props) => {
   const { buttonStyle, textStyle } = styles;
