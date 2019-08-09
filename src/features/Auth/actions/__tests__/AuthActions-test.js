@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import firebase from 'firebase';
-import * as actions from '../../src/actions/AuthActions'
-import * as types from '../../src/actions/types'
+import * as actions from '../LoginActions'
+import * as types from '../types'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)

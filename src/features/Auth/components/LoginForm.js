@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { faAt, faKey } from '@fortawesome/free-solid-svg-icons';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
-import { Spinner, Input2, Button2 } from './common';
-import { colors } from './common/constants';
+import { Spinner, Input2, Button2 } from '../../../components';
+import { colors } from '../../../api/constants';
 
 export class LoginForm extends Component {
 
@@ -13,7 +13,7 @@ export class LoginForm extends Component {
     return (
       <View style={styles.body}>
         <Image
-          source={require('../img/chorum-splash.png')}
+          source={require('../../../assets/img/chorum-splash.png')}
           style={styles.image}
         />
         <Text style={styles.errorTextStyle}>

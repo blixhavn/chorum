@@ -10,10 +10,3 @@ export const REG_PASSWORD_CHANGED = 'reg_password_changed';
 export const REG_SUCCESS = 'reg_success';
 export const REG_FAIL = 'reg_fail';
 export const REG_SUBMITTED = 'reg_submitted';
-
-export const SONG_UPDATE = 'employee_update';
-export const SONG_CREATE = 'employee_create';
-export const SONGS_FETCH_SUCCESS = 'employee_fetch_success';
-export const SONG_SAVE_SUCCESS = 'employee_save_success';
-
-export const CHOIR_SETTINGS_FETCH_SUCCESS = 'choir_settings_fetch_success';

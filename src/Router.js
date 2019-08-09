@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Scene, Router, Actions } from 'react-native-router-flux';
-import { faNewspaper , faMusic } from '@fortawesome/free-solid-svg-icons';
-import LoginForm from './components/LoginForm';
-import RegisterForm from './components/RegisterForm';
-import RegisterSuccessful from './components/RegisterSuccessful';
-import NewsDisplay from './components/NewsDisplay';
-import SongList from './components/SongList';
-import SongForm from './components/SongForm';
-import { colors } from './components/common/constants';
-import { TabIcon } from './components/common';
+import { faNewspaper , faMusic, faUsers } from '@fortawesome/free-solid-svg-icons';
+import LoginForm from './features/Auth/components/LoginForm';
+import RegisterForm from './features/Auth/components/RegisterForm';
+import RegisterSuccessful from './features/Auth/components/RegisterSuccessful';
+import NewsDisplay from './features/News/components/NewsDisplay';
+import SongList from './features/Songs/components/SongList';
+import SongForm from './features/Songs/components/SongForm';
+import { colors } from './api/constants';
+import { TabIcon } from './components';
 
 const sceneStyle = {
   backgroundColor: colors.purple,

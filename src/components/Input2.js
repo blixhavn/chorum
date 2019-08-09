@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput, View } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { colors } from './constants';
+import { colors } from '../api/constants';
 
 const Input2 = (props) => {
   return (
