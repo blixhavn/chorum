@@ -3,12 +3,13 @@ import {
   LOGIN_PASSWORD_CHANGED,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
-  LOGIN_USER_SUBMITTED
+  LOGIN_USER_SUBMITTED,
+  USER_INFO_REFRESHED
 } from '../actions/types';
 
 const INITIAL_STATE = {
-  email: '',
-  password: '',
+  email: 'oyblix@gmail.com',
+  password: 'llllll',
   user: null,
   error: '',
   loading: false
@@ -26,6 +27,8 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, ...INITIAL_STATE, user: action.payload };
     case LOGIN_USER_FAIL:
       return { ...state, error: 'Authentication Failed.', password: '', loading: false };
+    case USER_INFO_REFRESHED:
+      return { ...state, user: { ...state.user, profile: action.payload }}
     default:
       return state;
   }

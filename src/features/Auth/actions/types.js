@@ -10,3 +10,5 @@ export const REG_PASSWORD_CHANGED = 'reg_password_changed';
 export const REG_SUCCESS = 'reg_success';
 export const REG_FAIL = 'reg_fail';
 export const REG_SUBMITTED = 'reg_submitted';
+
+export const USER_INFO_REFRESHED = 'user_info_refreshed';

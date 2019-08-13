@@ -4,10 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { colors } from '../api/constants';
 
 const Input2 = (props) => {
+  
+  const renderIcon = () => {
+    if (props.icon) {
+      return <FontAwesomeIcon style={styles.inputIcon} icon={props.icon}/>
+    }
+  }
+  
+  props.icon = props.icon || null
   return (
 
     <View style={styles.loginField}>
-      <FontAwesomeIcon style={styles.inputIcon} icon={props.icon} />
+      {renderIcon()}
       <TextInput style={styles.input} {...props} />
     </View>
   );
