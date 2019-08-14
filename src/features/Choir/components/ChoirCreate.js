@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { choirUpdate, choirCreate } from '../actions';
+import { choirCreate } from '../actions';
 import { Card, CardSection, Button, Spinner } from './../../../components';
 import { colors } from './../../../api/constants'
 import ChoirForm from './ChoirForm';

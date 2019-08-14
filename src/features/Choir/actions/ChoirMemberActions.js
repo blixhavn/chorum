@@ -40,6 +40,23 @@ export const joinChoir = (user, accessCode) => {
   return onJoinError('User already in choir');
 };
 
+export const approveApplicant = (user) => {
+  return (dispatch) => {
+    firebase.database().ref(`/user/${user.uid}`)
+      .update({choirApproved: true});
+  }
+}
+
+export const removeMember = (user) => {
+  return (dispatch) => {
+    firebase.database().ref(`/user/${user.uid}`)
+      .update({
+        choirID: '',
+        choirApproved: false
+      });
+  }
+}
+
 const onJoinError = (error) => {
   return {
     type: CHOIR_JOIN_FAILED,

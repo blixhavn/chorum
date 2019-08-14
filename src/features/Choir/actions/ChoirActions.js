@@ -32,7 +32,7 @@ export const choirInfoFetch = (user) => {
     return (dispatch) => {
       dispatch({ type: CHOIR_INFO_FETCH_START });
 
-      firebase.database().ref(`/choir/${choirID}`)
+      firebase.database().ref(`/choir/${choirID}/`)
         .on('value', snapshot => {
           dispatch({ type: CHOIR_INFO_FETCH_SUCCESS, payload: snapshot.val() });
         });
@@ -48,9 +48,8 @@ export const choirFetchApplicants = (user) => {
     return (dispatch) => {
       dispatch({ type: CHOIR_APPLICANT_FETCH_START });
 
-      firebase.database().ref()
-      .orderByChild('choirID').equalTo(choirID)
-      .filter(item => item.choirApproved === true)
+      firebase.database().ref('/user/')
+      .orderByChild('choirID_choirApproved').equalTo(`${choirID} false`)
       .on('value', snapshot => {
         dispatch({ type: CHOIR_APPLICANT_FETCH_SUCCESS, payload: snapshot.val()});
       });
@@ -59,7 +58,6 @@ export const choirFetchApplicants = (user) => {
   return onFetchApplicantsError('Could not find Choir ID');
   
 }
-
 
 export const choirCreate = (user, { name, website, email }) => {
   return (dispatch) => {
