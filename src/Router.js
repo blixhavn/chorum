@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import { connect } from 'react-redux';
 import { Scene, Router, Actions } from 'react-native-router-flux';
 import { faNewspaper , faMusic, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +9,10 @@ import RegisterSuccessful from './features/Auth/components/RegisterSuccessful';
 import NewsDisplay from './features/News/components/NewsDisplay';
 import SongList from './features/Songs/components/SongList';
 import SongForm from './features/Songs/components/SongForm';
+import ChoirInfo from './features/Choir/components/ChoirInfo';
+import ChoirJoinOrCreate from './features/Choir/components/JoinOrCreate';
+import ChoirCreate from './features/Choir/components/ChoirCreate';
+import ChoirApplicationPending from './features/Choir/components/ApplicationPending';
 import { colors } from './api/constants';
 import { TabIcon } from './components';
 
@@ -28,6 +33,12 @@ class RouterComponent extends Component {
             showLabel={false}
           >
             <Scene key="newsDisplay" component={NewsDisplay} title="News" showLabel={false} icon={TabIcon(faNewspaper)}/>
+            <Scene key="choirSettings" showLabel={false} icon={TabIcon(faUsers)}>
+              <Scene key="choirInfo" component={ChoirInfo} title="Your choir" initial={this.props.hasChoir && this.props.isApprovedInChoir}/>
+              <Scene key="choirJoinOrCreate" component={ChoirJoinOrCreate} title="Your choir" initial={!this.props.hasChoir} />
+              <Scene key="choirCreate" component={ChoirCreate} title="Create new choir" />
+              <Scene key="choirApplicationPending" component={ChoirApplicationPending} title="Your choir" initial={this.props.hasChoir && !this.props.isApprovedInChoir}/>
+            </Scene>
             <Scene key="songs" showLabel={false} icon={TabIcon(faMusic)}>
               <Scene key="songList" component={SongList} title="Songs" onRight={() => Actions.addSong()} rightTitle="Add"/>
               <Scene key="addSong" component={SongForm} title="Add song" />
@@ -47,8 +58,10 @@ class RouterComponent extends Component {
 
 const mapStateToProps = ({ auth }) => {
   const loggedIn = auth.user !== null;
+  const hasChoir = _.get(auth, 'user.profile.choirID') !== undefined;
+  const isApprovedInChoir =_.get(auth, 'user.profile.choirApproved') || false;
 
-  return { loggedIn };
+  return { loggedIn, hasChoir, isApprovedInChoir };
 };
 
 export default connect(mapStateToProps)(RouterComponent);

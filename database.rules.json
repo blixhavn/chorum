@@ -1,0 +1,30 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "user": {
+      ".indexOn": "choirID",
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid",
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "lastLoggedIn": {
+          ".validate": "newData.val() <= now"
+        },
+        "signedUp": {
+          ".validate": "newData.val() <= now"
+        },
+        "role": {
+          ".validate": "(root.child('users/'+auth.uid+'/role').val() === 'admin' && newData.val() === 'admin') || newData.val() === 'user'"
+        }
+      }
+    },
+    "choir": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": "accessCode"
+    }
+  }
+}

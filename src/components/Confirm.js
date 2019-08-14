@@ -41,6 +41,7 @@ const styles = {
   },
   containerStyle: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    padding: 40,
     position: 'relative',
     flex: 1,
     justifyContent: 'center'

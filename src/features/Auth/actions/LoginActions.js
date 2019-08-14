@@ -5,7 +5,8 @@ import {
   LOGIN_PASSWORD_CHANGED,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
-  LOGIN_USER_SUBMITTED
+  LOGIN_USER_SUBMITTED,
+  USER_INFO_REFRESHED
 } from './types';
 
 export const emailChanged = (text) => {
@@ -21,6 +22,18 @@ export const passwordChanged = (text) => {
     payload: text
   };
 };
+
+export const refreshProfile = (user) => {
+  return (dispatch) => {
+    firebase.database().ref(`/user/${user.uid}`)
+      .once('value', snapshot => {
+        dispatch({
+          type: USER_INFO_REFRESHED,
+          payload: snapshot.val()
+        });
+      });
+  }  
+}
 
 export const loginUser = ({ email, password }) => {
   return (dispatch) => {
