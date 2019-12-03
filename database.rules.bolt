@@ -1,0 +1,27 @@
+// Functions
+// *********
+function userInMyChoir (auth, uid) {
+    return root.child('choir').child(root.child('user').child(auth.uid).child('choirID').val()).child('member').child(uid).val()
+    && root.child('choir').child('member').child(auth.uid).child('approved').val() == true;
+}
+
+function isUser(auth, uid) {
+    return auth.uid == uid;
+}
+
+function isAdmin(auth) {
+    return root.child('user').child(auth.uid).child('isAdmin').val() == true;
+}
+
+// Paths
+// *****
+path /user/{uid} {
+    read() { userInMyChoir(auth, uid) ||isUser(auth, uid) || isAdmin(auth) }
+    write() { isUser(auth, uid) || isAdmin(auth) }
+    index() { ['choirID']}
+}
+
+path /choir/{choirID} {
+    read() { true }
+    write() { true }
+}
